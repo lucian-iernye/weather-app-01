@@ -18,7 +18,7 @@ section {
 #weatherContainer {
   background-color: rgba(0, 0, 0, 0.25);
   box-shadow: 1px 1px 5px black;
-  padding: 50px;
+  padding: 100px;
   border-radius: 10px;
   position: absolute;
 }
@@ -33,16 +33,18 @@ section {
   padding: 15px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
 }
 
 #searchContainer input {
-  width: 200px;
+  width: 400px;
+  padding: 8px;
 }
 
 #searchContainer button {
   background-color: rgb(1, 159, 198);
-  width: 75px;
+  padding: 8px;
+  width: 100px;
 }
 
 .searchControl {
