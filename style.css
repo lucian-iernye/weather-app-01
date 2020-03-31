@@ -21,6 +21,7 @@ section {
   padding: 100px;
   border-radius: 10px;
   position: absolute;
+  visibility: hidden;
 }
 
 #weatherContainer h1 {
