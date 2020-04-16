@@ -4,7 +4,7 @@ let units = "metric";
 
 let searchMethod;
 
-const getSearchMethod = searchTerm => {
+const getSearchMethod = (searchTerm) => {
   if (
     searchTerm.length === 5 &&
     Number.parseInt(searchTerm) + "" === searchTerm
@@ -15,20 +15,20 @@ const getSearchMethod = searchTerm => {
   }
 };
 
-const searchWeather = searchTerm => {
+const searchWeather = (searchTerm) => {
   getSearchMethod(searchTerm);
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}`
+    `https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&APPID=${appId}&units=${units}`
   )
-    .then(result => {
+    .then((result) => {
       return result.json();
     })
-    .then(result => {
+    .then((result) => {
       init(result);
     });
 };
 
-const init = resultFromServer => {
+const init = (resultFromServer) => {
   console.log(resultFromServer);
 
   switch (resultFromServer.weather[0].main) {
